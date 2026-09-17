@@ -8,6 +8,7 @@ from wagtail.admin.panels import FieldPanel, InlinePanel, PageChooserPanel
 
 
 class HomePage(Page):
+	banner_image = models.ForeignKey('wagtailimages.Image', null=True, blank=True, on_delete=models.SET_NULL, related_name='+')
 	tagline = RichTextField(blank=True)
 	body = RichTextField(blank=True)
 	max_count = 1 
@@ -15,6 +16,7 @@ class HomePage(Page):
 	content_panels = Page.content_panels + [
 		"tagline",
 		"body",
+		"banner_image",
 		InlinePanel("card", label="Display Card"),
 		]
 

@@ -1,0 +1,36 @@
+.button-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    gap: 2%;
+        
+    
+    
+    button {
+        margin: 1px;
+        padding: 1px;
+        border-radius: 12px;
+        background-color: transparent;
+        border: 2px solid transparent;
+        cursor: url(../cursor/cursor_red.ico), auto;
+        h4 {
+            text-wrap: nowrap;
+            margin: 4px;
+        }
+    }
+
+    @media (min-width: $tablet-width) {
+        button {
+            font-size: 1rem;
+            padding: 8px;
+            margin: 8px;
+        }
+    }
+
+    button:hover {
+        background-color: $lightblue;
+        border: 2px solid $blue;
+    }
+}

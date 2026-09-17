@@ -1,0 +1,324 @@
+@import '../base/_variables.scss';
+@import '../base/_hero.scss';
+
+
+.button-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    gap: 2%;
+        
+    
+    
+    button {
+        margin: 1px;
+        padding: 1px;
+        border-radius: 12px;
+        background-color: transparent;
+        border: 2px solid transparent;
+        cursor: url(../cursor/cursor_red.ico), auto;
+        h4 {
+            text-wrap: nowrap;
+            margin: 4px;
+        }
+    }
+
+    @media (min-width: $tablet-width) {
+        button {
+            font-size: 1.25vw;
+            padding: 8px;
+            margin: 8px;
+        }
+    }
+
+    button:hover {
+        background-color: $lightblue;
+        border: 2px solid $blue;
+    }
+}
+
+
+
+.card {
+    display: flex;
+    flex-direction: column;
+    padding: 5%;
+    justify-content: space-around;
+    border: 4px double $blue;
+    border-radius: 16px;
+    margin-top: 60px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+    img {
+        max-width: 100%;
+        height: auto;
+        border: 2px solid black;
+        border-radius: 12px;
+    }
+
+
+    .card-text-area {
+        
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: baseline;
+
+        a {
+            all: unset;
+            padding-top:5%;
+            padding-bottom: 5%;
+            text-decoration: underline;
+            text-wrap: nowrap;
+            cursor: url(../cursor/cursor_blue.ico), auto;
+        }
+        
+        .card-title {
+            font-family: OpryFont;
+            align-self: center;
+            padding-bottom: 8px;
+            font-size: 2vw;
+        }
+        @media (min-width: $tablet-width) {
+            .card-title {
+                font-size: 1.5rem;
+                align-self: flex-start;
+
+            }
+        }
+        @media (max-width: $mobile-width) {
+            .card-title {
+                font-size: 14px;
+            }
+        }
+
+        .card-list {
+            align-self: flex-start;
+            padding-bottom: 8px;
+            display: flex;
+            flex-direction: column;
+
+            a {
+                font-size: 2.5vw;
+            }
+            @media (min-width: $tablet-width) {
+                a {
+                    font-size: 1.75rem;
+                }
+            }
+        }
+        @media (max-width: $mobile-width) {
+            .card-list {
+                display: none;
+            }
+        }
+
+        .card-button {
+            padding-bottom: 8px;
+            align-self: center;
+
+            button {
+                background-color: $blue;
+                border: none;
+                color: white;
+                padding: 10px 16px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 2vw;
+            }
+            @media (min-width: $tablet-width) {
+                button {
+                    font-size: 16px;
+                    padding: 15px 32px;
+                }
+            }
+
+            button:hover {
+                background-color: $red; 
+                cursor: url(../cursor/cursor_blue.ico), auto;
+
+            }
+            @media (max-width: $mobile-width) {
+                button {
+                    font-size: 14px;
+
+                }
+            }   
+
+        }
+        @media (min-width: $tablet-width) {
+            .card-button {
+                align-self: flex-start;
+            }
+        }
+    }
+    @media (min-width: $tablet-width) {
+        .card-text-area {
+            padding-right: 8px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: flex-start;
+        }
+
+    }
+}
+@media (min-width: $tablet-width) {
+    .card {
+        flex-direction: row;
+    }
+}
+@media (max-width: $mobile-width) {
+    .card {
+        margin-top:16px;
+    }
+}
+
+
+.right-card {
+    display: flex;
+    flex-direction: column;
+    padding: 5%;
+    justify-content: space-around;
+    border: 4px double $blue;
+    border-radius: 16px;
+    margin-top: 60px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+    .card-image-container {
+        order: 2;
+
+            img {
+                max-width: 100%;
+                height: auto;
+                border: 2px solid black;
+                border-radius: 12px;
+            }
+
+    }
+
+
+    .card-text-area {
+        
+        order: 1;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: baseline;
+
+        a {
+            all: unset;
+            padding-top:5%;
+            padding-bottom: 5%;
+            text-decoration: underline;
+            text-wrap: nowrap;
+            text-align: left;
+            cursor: url(../cursor/cursor_blue.ico), auto;
+        }
+        
+        .card-title {
+            text-wrap: nowrap;
+            font-family: OpryFont;
+            align-self: center;
+            padding-bottom: 8px;
+            font-size: 2vw;
+        }
+        @media (min-width: $tablet-width) {
+            .card-title {
+                font-size: 1.5rem;
+                align-self: flex-end;
+
+            }
+        }
+        @media (max-width: $mobile-width) {
+            .card-title {
+                font-size: 14px;
+            }
+        }
+
+        .card-list {
+            align-self: flex-end;
+            padding-bottom: 8px;
+            display: flex;
+            flex-direction: column;
+
+            a {
+                font-size: 2.5vw;
+            }
+            @media (min-width: $tablet-width) {
+                a {
+                    font-size: 1.75rem;
+                    text-align: right;
+                }
+            }
+        }
+        @media (max-width: $mobile-width) {
+            .card-list {
+                display: none;
+            }
+        }
+        .card-button {
+            padding-bottom: 8px;
+            align-self: center;
+
+            button {
+                background-color: $blue;
+                border: none;
+                color: white;
+                padding: 10px 16px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 2vw;
+            }
+            @media (min-width: $tablet-width) {
+                button {
+                    font-size: 16px;
+                    padding: 15px 32px;
+                }
+            }
+            @media (max-width: $mobile-width) {
+                button {
+                    font-size: 14px;
+
+                }
+            }            
+
+            button:hover {
+                background-color: $red; 
+                cursor: url(../cursor/cursor_blue.ico), auto;
+
+            }
+
+        }
+        @media (min-width: $tablet-width) {
+            .card-button {
+                align-self: flex-end;
+            }
+        }
+    }
+    @media (min-width: $tablet-width) {
+        .card-text-area {
+            padding-left: 8px;
+            order: 3;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: flex-end;
+        }
+
+    }
+}
+@media (min-width: $tablet-width) {
+    .right-card {
+        flex-direction: row;
+    }
+}
+@media (max-width: $mobile-width) {
+    .right-card {
+        margin-top:16px;
+    }
+}

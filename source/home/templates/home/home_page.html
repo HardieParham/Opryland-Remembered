@@ -3,9 +3,12 @@
 
 {% block body_class %}template-homepage{% endblock %}
 
-
+{% block extra_css %}
+	<link rel="stylesheet" type="text/css" href="{% static 'styles/home.min.css' %}">
+{% endblock %}
 
 {% block content %}
+    {% image page.banner_image width-600 class="rounded-corners" %}
 	{{ page.tagline|richtext }}
 	{{ page.body|richtext }}
 

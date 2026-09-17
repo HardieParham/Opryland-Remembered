@@ -1,0 +1,193 @@
+@import '_variables.scss';
+
+html {
+    margin: 0%;
+    padding: 0%;
+    background-color: $background-color;
+    cursor: url(../cursor/cursor_red.ico), auto;
+
+
+    body {
+        margin: 0%;
+        padding: 0%;
+
+
+        .bg-content-top{
+            background-image: url('../images/bg/bg-map-top.png');
+            background-color: $background-color;
+            background-repeat: no-repeat; /* Prevents image from repeating */
+            background-position: center top; /* Centers the image */
+            background-size: 100% 115px;
+            min-width: 100%;
+            margin-left: 0%;
+            margin-right: 0%;
+            margin-top: 0%;
+            margin-bottom: 0%;
+            padding: 0%;
+            height: 115px;
+
+
+
+            .all-content-nav{
+                margin-top: 0px;
+                margin-bottom: 0%;
+                margin-left: 7%;
+                margin-right: 7%;
+                padding-left: 16px;
+                padding-right: 16px;
+                background-color: $background-color;
+                height: 100%;
+                
+                .navbar{
+                    padding-top: 0px;
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    a {
+                        all: unset;
+                        cursor: url(../cursor/cursor_blue.ico), auto;
+                    }
+
+
+                    .brand {
+                        font-family: OpryFont;
+                        font-size: 1.5rem;
+                        flex-grow: 2;
+                    }
+                    @media (min-width: $mobile-width) {
+                        .brand {
+                            font-size: 3.1vw;
+                        }
+                    }
+
+                    .button-container {
+                        flex-grow: 2;
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        justify-content: flex-start;
+                        gap: 4%;
+                            
+                        
+                        
+                        button {
+                            margin: 1px;
+                            padding: 1px;
+                            border-radius: 12px;
+                            background-color: transparent;
+                            border: 2px solid transparent;
+                            cursor: url(../cursor/cursor_red.ico), auto;
+                            text-wrap: nowrap;
+                            margin: 4px;
+							font-weight: bold;
+                        }
+
+                        @media (min-width: $tablet-width) {
+                            button {
+                                font-size: 1.5rem;
+                                padding: 8px;
+                                margin: 8px;
+                            }
+                        }
+
+                        button:hover {
+                            background-color: $lightblue;
+                            border: 2px solid $blue;
+                        }
+                    }
+                    @media (min-width: $mobile-width) {
+                        .button-container {
+                            justify-content: flex-end;
+                        }
+                    }
+                }
+                @media (min-width: $tablet-width) {
+                    .navbar {
+                        padding-top: 0px;
+                    }
+                }
+                @media (min-width: $mobile-width) and (max-width: $tablet-width) {
+                    .navbar {
+                        margin-right: 16px;
+                        padding-top: 20px;
+                    }
+                }
+
+            }
+        }
+
+        
+        
+        .bg-content-mid{
+            background-image: url('../images/bg/bg-map-mid.png');
+            background-color: $background-color;
+            background-repeat: no-repeat; /* Prevents image from repeating */
+            background-position: center; /* Centers the image */
+            background-size: 100% 100%;
+            min-height: 100vh;
+            margin: 0%;
+            padding: 0%;
+            
+            .all-content{
+                margin-top: 0px;
+                margin-bottom: 0%;
+                margin-left: 7%;
+                margin-right: 7%;
+                padding-left: 0px;
+                padding-right: 0px;
+                padding-bottom: 16px;
+                background-color: $background-color;
+                min-height: 85vh;
+                
+                .content {
+                    width: 100%;
+                    
+                }
+                @media (min-width: $mobile-width) {
+                    .content {
+                        padding-top: 16px;
+                    }
+                }                
+                
+            }
+            @media (min-width: $mobile-width) {
+                .all-content {
+                    padding-left: 16px;
+                    padding-right: 16px;
+                }
+            }   
+        }
+
+
+        .bg-content-end{
+            background-image: url('../images/bg/bg-map-bottom.png');
+            background-color: $background-color;
+            background-repeat: no-repeat; /* Prevents image from repeating */
+            background-position: center; /* Centers the image */
+            background-size: 100% 100%;
+            min-height: 120px;
+            margin: 0%;
+            padding: 0%;
+        }
+
+        @media (max-width: $mobile-width) {
+            .bg-content-end {
+                min-height: 60px;
+            }
+        }
+
+        
+        .footer{
+            text-align: center;
+            padding: 32px;
+            background-color: white;
+        }
+    }
+}
+
+.opry {
+    font-family: OpryFont;
+}

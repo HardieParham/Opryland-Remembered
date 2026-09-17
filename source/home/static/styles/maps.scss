@@ -1,0 +1,45 @@
+@import '../base/_variables.scss';
+
+a {
+    cursor: url(../cursor/cursor_blue.ico), auto;
+}
+
+hr {
+    background-color: $red;
+    border: 0;
+    clear:both;
+    display:block;
+    width: 96%;               
+    height: 2px;
+}
+
+
+.all-maps-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+
+
+    .map-box {
+        margin: 12px;
+
+        img {
+            height:256px; 
+            width:auto;
+        }
+        
+        p {
+            text-align: center;
+            font-size: 24px;
+        }
+    }
+}
+
+
+
+.map-view {
+    img {
+        width: 100%
+    }
+}
