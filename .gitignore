@@ -1,5 +1,5 @@
 staticfiles/
-gcs-key.json
+source/gcs-key.json
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
