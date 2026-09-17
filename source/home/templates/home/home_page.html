@@ -1,13 +1,22 @@
 {% extends "base.html" %}
-{% load static %}
-{% load wagtailcore_tags %}
+{% load wagtailcore_tags static wagtailimages_tags %}
 
 {% block body_class %}template-homepage{% endblock %}
 
 
 
 {% block content %}
-
+	{{ page.tagline|richtext }}
 	{{ page.body|richtext }}
+
+	{% for card in cards %}
+		<p>{{ card.card_name }}</p>
+		{% for link in card.links.all %}
+        	<p>{{ link.link_name }}</p>
+			{% if link.link_image %}
+                {% image link.link_image fill-64x64 class="rounded-corners" %}
+			{% endif %}
+    	{% endfor %}
+	{% endfor %}
 
 {% endblock content %}
