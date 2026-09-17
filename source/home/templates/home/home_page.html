@@ -8,18 +8,30 @@
 {% endblock %}
 
 {% block content %}
-    {% image page.banner_image width-600 class="rounded-corners" %}
-	{{ page.tagline|richtext }}
-	{{ page.body|richtext }}
+	<div class="hero-section">
+		{% image page.banner_image width-600 class="rounded-corners" %}
+	</div>
+	<div class="description-area">
+			<h1>{{ page.tagline|richtext }}</h1>
+			<p>{{ page.body|richtext }}</p>
+	</div>
 
 	{% for card in cards %}
-		<p>{{ card.card_name }}</p>
-		{% for link in card.links.all %}
-        	<p>{{ link.link_name }}</p>
-			{% if link.link_image %}
-                {% image link.link_image fill-64x64 class="rounded-corners" %}
-			{% endif %}
-    	{% endfor %}
+	<div class="card">
+		<h2 class="card-title">{{ card.card_name }}</h2>
+
+		<div class="card-text-area">
+			{% for link in card.links.all %}
+				<div class="link-area">
+					<p>{{ link.link_name }}</p>
+					{% if link.link_image %}
+						{% image link.link_image fill-64x64 class="rounded-corners" %}
+					{% endif %}
+				</div>
+
+			{% endfor %}
+		</div>
+	</div>
 	{% endfor %}
 
 {% endblock content %}
